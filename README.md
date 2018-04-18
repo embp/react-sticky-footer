@@ -22,6 +22,8 @@ A simple sticky footer for React.
 
 The sticky footer will stick to the bottom of the browser, on pages with long content. Once the user scrolls to the bottom the sticky footer will disappear, and will display the footer at the end of the content (in relation to where the StickyFooter tag was placed in your document).
 
+If the content size changes without a scroll, the component will auto-refresh its state to determine if it should display the sticky footer or not.
+
 ## What Sticky Footer doesn't do
 
 On content shorter than your browser's height, the sticky footer will render below the content, and will not stick to the bottom. I may add an option to stick to the browser in these cases.
