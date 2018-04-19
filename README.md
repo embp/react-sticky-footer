@@ -4,6 +4,8 @@ A simple sticky footer for React.
 
 ## This component is a work in progress!
 
+## How to install
+`npm install react-sticky-footer --save` or `yarn add react-sticky-footer`
 
 ## What Sticky Footer does?
 

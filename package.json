@@ -1,8 +1,9 @@
 {
   "name": "react-sticky-footer",
-  "version": "0.1.0",
+  "version": "0.1.0-rc1",
   "description": "A simple sticky footer component for your React apps",
   "main": "lib/index.js",
+  "jsnext:main": "es/index.js",
   "module": "es/index.js",
   "files": [
     "css",
@@ -27,9 +28,12 @@
     "react": "^16.3.2",
     "react-dom": "^16.3.2"
   },
-  "author": "Daniel Montano",
+  "author": "Daniel Montano <daniel@embusinessproducts.com>",
   "homepage": "http://www.embusinessproducts.com",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/embp/react-sticky-footer/issues"
+  },
   "repository": "https://github.com/embp/react-sticky-footer.git",
   "keywords": [
     "react",
