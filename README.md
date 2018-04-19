@@ -21,19 +21,19 @@ import StickyFooter from 'react-sticky-footer';
 ```
 
 ```jsx
-    <StickyFooter
-        bottomThreshold={50}
-        normalStyles={{
-        backgroundColor: "#999999",
-        padding: "2rem"
-        }}
-        stickyStyles={{
-        backgroundColor: "rgba(255,255,255,.8)",
-        padding: "2rem"
-        }}
-    >
-        Add any footer markup here
-    </StickyFooter>
+<StickyFooter
+    bottomThreshold={50}
+    normalStyles={{
+    backgroundColor: "#999999",
+    padding: "2rem"
+    }}
+    stickyStyles={{
+    backgroundColor: "rgba(255,255,255,.8)",
+    padding: "2rem"
+    }}
+>
+    Add any footer markup here
+</StickyFooter>
 ```
 
 ## How can I control the sticky footer?
