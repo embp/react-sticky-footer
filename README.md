@@ -1,8 +1,6 @@
 # react-sticky-footer
 
-A simple sticky footer for React.
-
-## This component is a work in progress!
+A simple sticky footer for React
 
 ## How to install
 `npm install react-sticky-footer --save` or `yarn add react-sticky-footer`
