@@ -16,6 +16,9 @@ If the content size changes without a scroll, the component will auto-refresh it
 On content shorter than your browser's height, the sticky footer will render below the content, and will not stick to the bottom. I may add an option to stick to the browser in these cases.
 
 ## How do I use it?
+```js
+import StickyFooter from 'react-sticky-footer';
+```
 
 ```jsx
     <StickyFooter
