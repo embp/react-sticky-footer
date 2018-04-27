@@ -24,16 +24,11 @@ export default class StickyFooter extends Component {
         this.props.onFooterStateChange && this.props.onFooterStateChange(true);
       }
     });
-    this.observer.observe(
-      this.props.targetElementId
-        ? document.getElementById(this.props.targetElementId)
-        : document.body,
-      {
-        childList: true,
-        subtree: true,
-        attributes: true
-      }
-    );
+    this.observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+      attributes: true
+    });
     window.addEventListener("scroll", this.handleScroll);
     this.determineState();
   }
@@ -84,12 +79,6 @@ export default class StickyFooter extends Component {
 }
 
 StickyFooter.propTypes = {
-  /**
-   * The ID of an element you'd like to use to watch for mutations that will tell the component it should check
-   * whether to display the footer or not. This is typically the element that is the immediate parent of the content
-   * you want to use StickyFooter on. The default is the document body.
-   */
-  targetElementId: PropTypes.string,
   /**
    * A value that tells the component how close to the bottom should the scroller be before the sticky footer hides
    * and displays at the end of your content. The default is 0, meaning the user needs to scroll all the way to the bottom

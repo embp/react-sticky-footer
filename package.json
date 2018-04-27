@@ -1,6 +1,6 @@
 {
   "name": "react-sticky-footer",
-  "version": "0.1.0-rc1",
+  "version": "0.1.0-rc2",
   "description": "A simple sticky footer component for your React apps",
   "main": "lib/index.js",
   "jsnext:main": "es/index.js",

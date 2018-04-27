@@ -11,9 +11,11 @@ The sticky footer will stick to the bottom of the browser, on pages with long co
 
 If the content size changes without a scroll, the component will auto-refresh its state to determine if it should display the sticky footer or not.
 
+The component will depend on the document body for height and mutation checks.
+
 ## What Sticky Footer doesn't do
 
-On content shorter than your browser's height, the sticky footer will render below the content, and will not stick to the bottom. I may add an option to stick to the browser in these cases.
+On content shorter than your browser's height, the sticky footer will render below the content, and will not stick to the bottom. In the future I may add an option to stick to the browser in these cases.
 
 ## How do I use it?
 ```js
@@ -39,8 +41,6 @@ import StickyFooter from 'react-sticky-footer';
 ## How can I control the sticky footer?
 
 ### Props
-
-__targetElementId__ (optional): The ID of an element you'd like to use to watch for mutations that will tell the component it should check whether to display the footer or not. This is typically the element that is the immediate parent of the content you want to use StickyFooter on. The default is the document body.
 
 __bottomThreshold__ (optional): A value that tells the component how close to the bottom should the scroller be before the sticky footer hides and displays at the end of your content. The default is 0, meaning the user needs to scroll all the way to the bottom before the footer hides. A number greater than 0 would cause the sticky footer to hide at some point before the user has scrolled all the way down, depending on the value of the number.
 
