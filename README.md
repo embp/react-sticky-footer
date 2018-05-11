@@ -44,7 +44,7 @@ import StickyFooter from 'react-sticky-footer';
 
 __bottomThreshold__ (optional): A value that tells the component how close to the bottom should the scroller be before the sticky footer hides and displays at the end of your content. The default is 0, meaning the user needs to scroll all the way to the bottom before the footer hides. A number greater than 0 would cause the sticky footer to hide at some point before the user has scrolled all the way down, depending on the value of the number.
 
-__stickAtMultiplier__ (optional): A value that tells the component how much the user should scroll back up before the sticky footer shows up again. The default is 0.001. A number greater than the default would require the user scroll up more before the sticky footer shows up.
+__stickAtThreshold__ (optional): A value that tells the component how much the user should scroll back up before the sticky footer shows up again. The default is 0.001. A number greater than the default would require the user scroll up more before the sticky footer shows up.
 
 __stickyStyles__ (optional): Styles to be applied to the sticky footer only.
 

@@ -13,16 +13,7 @@ export default class StickyFooter extends Component {
 
   componentDidMount() {
     this.observer = new MutationObserver(mutations => {
-      const targetHeight = mutations[mutations.length - 1].target.clientHeight;
-      const remainingHeight = document.body.clientHeight - targetHeight;
-      const totalContentHeight = targetHeight + remainingHeight;
-
-      if (totalContentHeight > window.innerHeight) {
-        this.determineState();
-      } else {
-        this.setState({ isAtBottom: true });
-        this.props.onFooterStateChange && this.props.onFooterStateChange(true);
-      }
+      this.determineState();
     });
     this.observer.observe(document.body, {
       childList: true,
@@ -44,10 +35,9 @@ export default class StickyFooter extends Component {
       position: "fixed",
       bottom: 0
     };
-    let initialStyles = { ...this.props.normalStyles, position: "static" };
     return (
       <div>
-        <div style={initialStyles}>{this.props.children}</div>
+        <div style={this.props.normalStyles}>{this.props.children}</div>
         {!this.state.isAtBottom && (
           <div style={fixedStyles}>{this.props.children}</div>
         )}
@@ -65,8 +55,7 @@ export default class StickyFooter extends Component {
       this.props.onFooterStateChange && this.props.onFooterStateChange(true);
     } else if (
       this.state.isAtBottom &&
-      scrollOffset <
-        contentHeight - contentHeight * this.props.stickAtMultiplier
+      scrollOffset < contentHeight - contentHeight * this.props.stickAtThreshold
     ) {
       this.setState({ isAtBottom: false });
       this.props.onFooterStateChange && this.props.onFooterStateChange(false);
@@ -91,7 +80,7 @@ StickyFooter.propTypes = {
    * The default is 0.001. A number greater than the default would require the user scroll up more before the
    * sticky footer shows up.
    */
-  stickAtMultiplier: PropTypes.number,
+  stickAtThreshold: PropTypes.number,
   /**
    * Styles to be applied to the sticky footer only.
    */
@@ -109,7 +98,7 @@ StickyFooter.propTypes = {
 
 StickyFooter.defaultProps = {
   bottomThreshold: 0,
-  stickAtMultiplier: 0.001,
+  stickAtThreshold: 0.001,
   stickyStyles: {},
   normalStyles: {}
 };
