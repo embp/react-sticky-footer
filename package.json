@@ -21,10 +21,12 @@
   },
   "dependencies": {},
   "peerDependencies": {
+    "prop-types": "15.x",
     "react": "16.x"
   },
   "devDependencies": {
-    "nwb": "0.21.x",
+    "inferno": "^5.0.0",
+    "nwb": "^0.23.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2"
   },
