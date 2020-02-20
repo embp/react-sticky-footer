@@ -27,8 +27,8 @@
   "devDependencies": {
     "inferno": "^5.0.0",
     "nwb": "^0.23.0",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   },
   "author": "Daniel Montano <daniel@embusinessproducts.com>",
   "homepage": "http://www.embusinessproducts.com/blog",
